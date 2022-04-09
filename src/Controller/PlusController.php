@@ -10,7 +10,7 @@ class PlusController extends AbstractController
     #[Route(
         path: '/plus/{a}/{b}',
         name: 'plus',
-        condition: "context.getMethod() in ['GET', 'HEAD']",
+        methods:['GET', 'HEAD'],
     )]
     public function plus(int $a, int $b): JsonResponse
     {
