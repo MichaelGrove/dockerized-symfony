@@ -7,9 +7,11 @@
         "php": ">=8.0.2",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "doctrine/annotations": "^1.13",
         "sensio/framework-extra-bundle": "^6.2",
         "symfony/console": "6.0.*",
         "symfony/dotenv": "6.0.*",
+        "symfony/expression-language": "6.0.*",
         "symfony/flex": "^2.1",
         "symfony/framework-bundle": "6.0.*",
         "symfony/monolog-bundle": "^3.7",
@@ -50,15 +52,9 @@
         "symfony/polyfill-php80": "*"
     },
     "scripts": {
-        "auto-scripts": {
-            "cache:clear": "symfony-cmd",
-            "assets:install %PUBLIC_DIR%": "symfony-cmd"
-        },
         "post-install-cmd": [
-            "@auto-scripts"
         ],
         "post-update-cmd": [
-            "@auto-scripts"
         ]
     },
     "conflict": {
