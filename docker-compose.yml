@@ -16,6 +16,7 @@ services:
     build: ./infra/php
     volumes:
       - .:/var/www/html
+      - ./infra/php/bashrc:/root/.bashrc
   #   depends_on:
   #     - redis
   #     - mariadb
