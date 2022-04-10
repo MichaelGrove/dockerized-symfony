@@ -39,4 +39,8 @@
         <extension class="Symfony\Component\Panther\ServerExtension" />
     </extensions>
     -->
+    <!-- Use if you want to empty database after testing -->
+    <!-- <extensions>
+        <extension class="DAMA\DoctrineTestBundle\PHPUnit\PHPUnitExtension"/>
+    </extensions> -->
 </phpunit>
