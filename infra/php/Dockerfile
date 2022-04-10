@@ -11,6 +11,10 @@ RUN apk add --no-cache \
     nano \
     ;
 
+RUN docker-php-ext-install \
+    pdo_mysql \
+    ;
+
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # https://getcomposer.org/doc/03-cli.md#composer-allow-superuser
