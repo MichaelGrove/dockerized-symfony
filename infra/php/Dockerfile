@@ -7,6 +7,8 @@ RUN apk add --no-cache \
     gettext \
     git \
     bash \
+    vim \
+    nano \
     ;
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
