@@ -21,7 +21,7 @@ Encore
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
     .addEntry('app', './resources/js/app.js')
-    .addStyleEntry('tailwind', './resources/css/tailwinc.css')
+    .addStyleEntry('tailwind', './resources/css/tailwind.css')
 
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
     // .enableStimulusBridge('./assets/controllers.json')
@@ -57,8 +57,10 @@ Encore
     })
 
     .enablePostCssLoader((options) => {
-        options.postcssOptions = {
-            config: './postcss.config.js',
+        if (Encore.isProduction()) {
+            options.postcssOptions = {
+                config: './postcss.config.js',
+            }
         }
     })
 

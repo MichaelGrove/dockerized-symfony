@@ -9,6 +9,8 @@ RUN apk add --no-cache \
     bash \
     vim \
     nano \
+    yarn \
+    npm \
     ;
 
 RUN docker-php-ext-install \
@@ -21,5 +23,3 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 ENV COMPOSER_ALLOW_SUPERUSER=1
 
 ENV PATH="${PATH}:/root/.composer/vendor/bin"
-
-
